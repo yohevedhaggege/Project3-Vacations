@@ -1,0 +1,26 @@
+
+.Menu {
+	display: absolute;
+    flex-direction: row;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+.Menu>.active {
+    color: cyan;
+    font-weight: bold;
+}
+
+.Menu>a {
+    margin-top: -10px;
+    color: white;
+    font-size: x-large;
+    font-family: Segoe Print;
+    margin-left: 50px;
+    box-shadow: 5px 5px 5px;
+
+}
+
+.Menu>a:hover {
+    color:turquoise;
+}

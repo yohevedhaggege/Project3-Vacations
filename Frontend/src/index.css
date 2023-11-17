@@ -1,0 +1,12 @@
+html, body, #root {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    text-align: center;
+    background-image: url(Assets/Images/holiday.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+}

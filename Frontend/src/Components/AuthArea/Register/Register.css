@@ -1,0 +1,42 @@
+
+.Register>form {
+    box-shadow: 10px 10px 10px;
+    transition: 0.3s;
+    width: 250px;
+    text-align: left;
+    padding: 10px;
+    width: 250px;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    font-weight: bold;
+    color: turquoise;
+    border: 3px solid;
+}
+
+.Register>.RegisterMember {
+    text-decoration: underline;
+}
+
+.Register input,
+.Register button {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.Register .Member {
+    text-align: center;
+}
+
+.Register .Login {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.Register .Error {
+    color: royalblue ;
+    font-weight: bold;
+    position: absolute;
+    margin: 0 20px;
+}
