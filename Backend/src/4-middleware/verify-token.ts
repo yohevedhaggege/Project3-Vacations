@@ -1,5 +1,4 @@
 
-import { UnauthorizedError } from "../3-models/error-models";
 import { NextFunction, Request, Response } from "express";
 import cyber from "../2-utils/cyber";
 

@@ -4,10 +4,10 @@ import Layout from './Components/LayoutArea/Layout/Layout';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import interceptors from './Utils/Interceptors';
-import React from 'react';
 
 // Register interceptors:
 interceptors.create();
+
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
 );

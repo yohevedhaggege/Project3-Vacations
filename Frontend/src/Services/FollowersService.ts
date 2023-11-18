@@ -1,5 +1,4 @@
 import axios from "axios";
-import FollowerModel from "../Models/FollowModel";
 import { FollowersActionType, followersStore } from "../Redux/FollowersState";
 import appConfig from "../Utils/AppConfig";
 import FollowModel from "../Models/FollowModel";

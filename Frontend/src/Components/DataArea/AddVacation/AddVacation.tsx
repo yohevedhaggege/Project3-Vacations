@@ -10,16 +10,14 @@ import useVerifyAdmin from "../../../Utils/useVerifyAdmin";
 
 function AddVacation(): JSX.Element {
 
-     useVerifyLoggedIn();
-     useVerifyAdmin();
+    useVerifyLoggedIn();
+    useVerifyAdmin();
     const currentDate = new Date().toISOString().split("T")[0];
     const { register, handleSubmit, formState } = useForm<VacationModel>();
     const [image, setImage] = useState<File>();
     const [preview, setPreview] = useState<string>("");
-       // Function redirect to another page:
-       const navigate = useNavigate();
-
-
+    // Function redirect to another page:
+    const navigate = useNavigate();
 
     useEffect(() => {
 
@@ -35,11 +33,11 @@ function AddVacation(): JSX.Element {
     }, [image]);
 
 
- 
+
     async function send(vacation: VacationModel) {
         // Check if dates is legal:
         if (new Date(vacation.startDate) > new Date(vacation.endDate)) {
-            notifyService.error("Cannot save the date because the endDate is earlier than the startDate." );
+            notifyService.error("Cannot save the date because the endDate is earlier than the startDate.");
             return;
 
         }
@@ -62,11 +60,11 @@ function AddVacation(): JSX.Element {
     return (
         <div className="AddVacation">
 
-<br></br>
+            <br></br>
 
             <form onSubmit={handleSubmit(send)}>
 
-                <h2>Add vacation</h2>
+                <h2 className="Add">Add vacation</h2>
 
                 <label>Destination: </label>
                 <input type="text" autoComplete="destination"  {...register("destination", VacationModel.destinationValidation)} />
@@ -79,17 +77,17 @@ function AddVacation(): JSX.Element {
                 <br />
 
                 <label>Start Date 🛫</label>
-                <input type="date" autoComplete="date"  min={currentDate} className="date"  {...register("startDate", VacationModel.startDateValidation)} />
+                <input type="date" autoComplete="date" min={currentDate} className="date"  {...register("startDate", VacationModel.startDateValidation)} />
                 <span className="Error">{formState.errors.startDate?.message}</span>
                 <br />
 
                 <label>End Date 🛬 </label>
-                <input type="date" autoComplete="date"  min={currentDate} className="date"  {...register("endDate", VacationModel.endDateValidation)} />
+                <input type="date" autoComplete="date" min={currentDate} className="date"  {...register("endDate", VacationModel.endDateValidation)} />
                 <span className="Error">{formState.errors.endDate?.message}</span>
                 <br />
 
                 <label>Price: </label>
-                <input type="number"  autoComplete="price"  {...register("price", VacationModel.priceValidation)} />
+                <input type="number" autoComplete="price"  {...register("price", VacationModel.priceValidation)} />
                 <span className="Error">{formState.errors.price?.message}</span>
                 <br />
 
@@ -104,7 +102,7 @@ function AddVacation(): JSX.Element {
                     }}
                 />
                 <p>
-                    <img className="image-preview" alt="add" src={preview} />
+                    <img className="image-preview" alt="" src={preview} />
                 </p>
 
                 <button>Add vacation</button>

@@ -15,8 +15,6 @@ class VacationModel {
     public isFollowing: number;
     public followersCount: number;
 
-
-
     public constructor(vacation: VacationModel) {
         this.vacationId = vacation.vacationId
         this.destination = vacation.destination;

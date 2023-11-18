@@ -1,16 +1,23 @@
 .AddVacation>form {
     box-shadow: 10px 10px 10px;
     transition: 0.3s;
-    width: 80%;
     text-align: left;
     padding: 10px;
     width: 250px;
-    margin: auto;
+    margin: 20px auto;
     font-family: Arial, Helvetica, sans-serif;
     font-size: large;
     font-weight: bold;
-    color: coral;
+    color: slateblue;
     border: 3px solid;
+    border-radius: 10px;
+
+}
+
+.AddVacation>form>.Add {
+    text-decoration: underline;
+    text-align: center;
+
 }
 
 .AddVacation>.image-preview {
@@ -32,7 +39,7 @@ select {
 }
 
 .textarea {
-    width: 100%; 
+    width: 100%;
 }
 
 .textarea:hover {
@@ -48,13 +55,14 @@ select {
 }
 
 .date {
-    width: 100%; 
+    width: 100%;
 }
 
 .Error {
-    color: darkcyan;
-    font-size: large;
+    color: purple;
     font-weight: bold;
     position: absolute;
-    right:200px;
+    text-align: left;
+    right: 300px;
+    margin: 0 50px;
 }

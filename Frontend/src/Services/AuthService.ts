@@ -1,6 +1,5 @@
 import axios from "axios";
 import UserModel from "../Models/UserModel";
-import RoleModel from "../Models/RoleModel";
 import appConfig from "../Utils/AppConfig";
 import { AuthAction, AuthActionType, authStore } from "../Redux/AuthState";
 import CredentialsModel from "../Models/CredentialsModel";

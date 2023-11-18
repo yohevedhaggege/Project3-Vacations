@@ -5,9 +5,10 @@ import appConfig from "../2-utils/app-config";
 import { ResourceNotFoundError, ValidationError } from "../3-models/error-models";
 import imageHelper from "../2-utils/image-helper";
 
-
 // Get all vacations 
 async function getAllVacations(userId: number): Promise<VacationModel[]> {
+
+    //create sql
     const sql = `
             SELECT DISTINCT
             V.*,
@@ -17,9 +18,7 @@ async function getAllVacations(userId: number): Promise<VacationModel[]> {
             FROM vacations as V LEFT JOIN followers as F
             ON V.vacationId = F.vacationId
             GROUP BY vacationId
-            ORDER BY startDate
-    
-        `;
+            ORDER BY startDate`;
 
     const vacations = await dal.execute(sql, [userId]);
 
@@ -140,25 +139,6 @@ async function deleteVacation(vacationId: number): Promise<void> {
     // If not exist:
     if (info.affectedRows === 0) throw new ResourceNotFoundError(vacationId);
 
-}
-
-// Get image name from database: 
-async function getImageNameFromDB(vacationId: number): Promise<string> {
-
-    // Create sql query:
-    const sql = `SELECT imageName FROM vacations WHERE vacationId = vacationId`;
-
-    // Get object array:
-    const vacations = await dal.execute(sql, [vacationId]);
-
-    // Extract single product: 
-    const vacation = vacations[0];
-
-    // If no such product: 
-    if (!vacation) return null;
-
-    // Return image name:
-    return vacation.imageName;
 }
 
 export default {

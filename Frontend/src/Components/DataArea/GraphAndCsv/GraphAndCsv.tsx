@@ -12,8 +12,6 @@ import { authStore } from "../../../Redux/AuthState";
 import useVerifyAdmin from "../../../Utils/useVerifyAdmin";
 import "./GraphAndCsv.css";
 
-
-
 ChartJS.register(
     CategoryScale,
     LinearScale,
@@ -42,7 +40,11 @@ function FollowersGraph(): JSX.Element {
                 display: true,
                 text: "Vacation Report",
                 color: "black",
-            },
+                font: {
+                    size: 30,
+                    weight: "bold",
+               },
+            }
         },
         scales: {
             y: {

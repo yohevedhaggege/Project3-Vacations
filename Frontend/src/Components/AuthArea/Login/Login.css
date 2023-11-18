@@ -1,6 +1,5 @@
-.Login > form {
-	width: 250px;
-    border: 1px solid;
+.Login>form {
+    width: 250px;
     text-align: left;
     margin: 20px auto;
     padding: 20px;
@@ -10,32 +9,36 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: large;
     font-weight: bold;
-    color: turquoise;
+    color: slateblue;
     border: 3px solid;
 }
 
-.Login >.LoginMember {
+.Login> form >.LoginMember {
     text-decoration: underline;
+    text-align: center;
 }
 
-.Login input, .Login button {
+.Login input,
+.Login button {
     width: 100%;
     box-sizing: border-box;
     margin-bottom: 20px;
 }
 
-.Login .member{
+.Login .member {
     text-align: center;
 }
 
-.Login .registerNow{
-text-align: center;
-text-decoration: underline;
+.Login .registerNow {
+    text-align: center;
+    text-decoration: underline;
 }
 
 .Login .Error {
-    color: royalblue;
+    color: purple;
     font-weight: bold;
     position: absolute;
-    margin: 0 20px;
+    text-align: left;
+    right:380px;
+
 }

@@ -29,9 +29,9 @@ function Login(): JSX.Element {
     return (
         <div className="Login">
 
-            <h2 className="LoginMember">Login</h2>
-
             <form onSubmit={handleSubmit(send)}>
+
+            <h2 className="LoginMember">Login</h2>
 
                 <label>Email: </label>
                 <input type="email" autoComplete="email" {...register("email",UserModel.emailValidation)} />

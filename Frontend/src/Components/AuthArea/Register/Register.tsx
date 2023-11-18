@@ -27,29 +27,33 @@ function Register(): JSX.Element {
 
     return (
         <div className="Register">
-            <h2 className="RegisterMember">Register</h2>
+
+            <br></br>
+
             <form onSubmit={handleSubmit(send)}>
 
+                <h2 className="RegisterMember">Register</h2>
+
                 <label>First name: </label>
-                <input type="text" autoComplete=" first name"  pattern="^[a-zA-Z]{2,20}$"
+                <input type="text" autoComplete=" first name" pattern="^[a-zA-Z]{2,20}$"
                     {...register("firstName", UserModel.firstNameValidation)} />
                 <span className="Error">{formState.errors.firstName?.message}</span>
 
 
                 <label>Last name: </label>
-                <input type="text" autoComplete=" last email"  pattern="^[a-zA-Z]{2,20}$"
+                <input type="text" autoComplete=" last email" pattern="^[a-zA-Z]{2,20}$"
                     {...register("lastName", UserModel.lastNameValidation)} />
                 <span className="Error">{formState.errors.lastName?.message}</span>
 
 
                 <label>Email: </label>
-                <input type="email" autoComplete="email" 
+                <input type="email" autoComplete="email"
                     {...register("email", UserModel.emailValidation)} />
                 <span className="Error">{formState.errors.email?.message}</span>
 
 
                 <label>Password: </label>
-                <input type="password" pattern="^.{4,}$" autoComplete="password" 
+                <input type="password" pattern="^.{4,}$" autoComplete="password"
                     {...register("password", UserModel.passwordValidation)} />
                 <span className="Error">{formState.errors.password?.message}</span>
 

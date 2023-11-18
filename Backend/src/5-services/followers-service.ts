@@ -3,7 +3,6 @@ import dal from "../2-utils/dal";
 import FollowersModel from "../3-models/followers-model";
 import { ResourceNotFoundError, ValidationError } from "../3-models/error-models";
 
-
 // Add new follower: 
 async function addFollower(follower: FollowersModel): Promise<void> {
 

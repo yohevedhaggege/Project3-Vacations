@@ -92,7 +92,7 @@ function UpdateVacation(): JSX.Element {
 
             <form onSubmit={handleSubmit(send)}>
 
-                <h2>Update vacation</h2>
+                <h2 className="Update">Update vacation</h2>
 
                 <label>Destination: </label>
                 <input type="text" autoComplete="destination"  {...register("destination", VacationModel.destinationValidation)} />

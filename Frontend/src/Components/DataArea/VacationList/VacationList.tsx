@@ -14,7 +14,6 @@ import { Grid } from "@mui/material";
 import "./VacationList.css";
 
 
-
 function VacationsList(): JSX.Element {
 
     useVerifyLoggedIn();
@@ -74,7 +73,6 @@ function VacationsList(): JSX.Element {
             vacationsStore.dispatch({ type: VacationsActionType.ClearAll, payload: [] });
 
             const vacations = await userAdminService.getAllVacations(user!.userId);
-
 
             let filteredVacations = vacations;
             if (displayFollowed) filteredVacations = filteredVacations.filter(v => v.isFollowing);

@@ -1,6 +1,5 @@
 import { NextFunction, Request, Response } from "express";
 import cyber from "../2-utils/cyber";
-import { UnauthorizedError } from "./error-models";
 
 // Verify that the user is Admin:
 function verifyAdmin(request: Request, response: Response, next: NextFunction): void {
